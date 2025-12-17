@@ -1,12 +1,15 @@
 :root{
   --bg:#0b0b0c;
   --card:#121214;
-  --text:#f3f3f4;
-  --muted:#bdbdc2;
-  --border:rgba(255,255,255,.10);
-  --accent:#f4b400;
-  --accent2:#7b1c2c;
+  --text:#ffffff;
+  --muted:#d0d0d0;
+  --border:rgba(255,255,255,.15);
+
+  /* Glencoe colors */
+  --accent:#ffffff;        /* white */
+  --accent2:#7b0d1e;       /* deep crimson / maroon */
 }
+
 
 *{box-sizing:border-box}
 body{
