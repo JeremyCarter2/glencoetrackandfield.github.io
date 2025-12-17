@@ -1,14 +1,107 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Welcome to My Website</title>
-    <style>
-      body { font-family: Arial; padding: 40px; max-width: 700px; margin: auto; }
-      h1 { color: #333; }
-    </style>
-  </head>
-  <body>
-    <h1>Hello!</h1>
-    <p>This is my new website. More coming soon.</p>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Glencoe Track & Field</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">Glencoe Track &amp; Field</a>
+
+      <nav class="nav">
+        <a href="/">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+            Track &amp; Field ▾
+          </button>
+          <div class="dropdown-menu">
+            <a href="/track-and-field/">Track &amp; Field</a>
+            <a href="/track-and-field/photos/">T&amp;F Photos</a>
+            <a href="/track-and-field/donations/">Donation Instructions</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+            Cross Country ▾
+          </button>
+          <div class="dropdown-menu">
+            <a href="/cross-country/">Cross Country</a>
+            <a href="/cross-country/photos/">XC Photos</a>
+          </div>
+        </div>
+
+        <a href="/coaching-staff/">Coaching Staff</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <h1>Glencoe Track &amp; Field</h1>
+        <p class="sub">
+          A team for every athlete — sprints, distance, jumps, throws, relays.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="/track-and-field/">Track &amp; Field</a>
+          <a class="btn" href="/cross-country/">Cross Country</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap card">
+      <h2>Quick Links</h2>
+      <div class="link-grid">
+        <a class="tile" href="/track-and-field/#signup">Sign Up</a>
+        <a class="tile" href="/track-and-field/#winter">Winter Training</a>
+        <a class="tile" href="/track-and-field/#rules">Rules &amp; Expectations</a>
+        <a class="tile" href="/track-and-field/#store">Team Store</a>
+        <a class="tile" href="/track-and-field/#absence">Excused Absence Form</a>
+        <a class="tile" href="/track-and-field/#faq">FAQs</a>
+        <a class="tile" href="https://www.athletic.net/" target="_blank" rel="noopener">Athletic.net</a>
+        <a class="tile" href="/track-and-field/donations/">Donations</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-title">Contact</div>
+        <div><a href="mailto:TRACK_COACH_EMAIL@school.org">Contact Track Coach</a></div>
+        <div><a href="mailto:XC_COACH_EMAIL@school.org">Contact XC Coach</a></div>
+      </div>
+
+      <div>
+        <div class="footer-title">Glencoe High School</div>
+        <div>Address line 1</div>
+        <div>City, OR ZIP</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // simple dropdown behavior for mobile + keyboard
+    document.querySelectorAll('.dropdown').forEach(dd => {
+      const btn = dd.querySelector('.dropbtn');
+      btn.addEventListener('click', () => {
+        const open = dd.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      document.querySelectorAll('.dropdown.open').forEach(dd => {
+        if (!dd.contains(e.target)) {
+          dd.classList.remove('open');
+          dd.querySelector('.dropbtn')?.setAttribute('aria-expanded','false');
+        }
+      });
+    });
+  </script>
+</body>
 </html>
