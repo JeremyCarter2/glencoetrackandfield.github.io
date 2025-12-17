@@ -9,33 +9,18 @@
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/">Glencoe Track &amp; Field</a>
+      <!-- Put your logo at: /assets/logo.png -->
+      <a class="brand" href="/" aria-label="Glencoe Track & Field Home">
+        <img src="/assets/logo.png" alt="Glencoe Track & Field" />
+      </a>
 
       <nav class="nav">
         <a href="/">Home</a>
-
-        <div class="dropdown">
-          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
-            Track &amp; Field ▾
-          </button>
-          <div class="dropdown-menu">
-            <a href="/track-and-field/">Track &amp; Field</a>
-            <a href="/track-and-field/photos/">T&amp;F Photos</a>
-            <a href="/track-and-field/donations/">Donation Instructions</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
-            Cross Country ▾
-          </button>
-          <div class="dropdown-menu">
-            <a href="/cross-country/">Cross Country</a>
-            <a href="/cross-country/photos/">XC Photos</a>
-          </div>
-        </div>
-
-        <a href="/coaching-staff/">Coaching Staff</a>
+        <a href="/track-and-field/">Track &amp; Field</a>
+        <a href="https://www.athletic.net/team/218/track-and-field-outdoor/2026"
+           target="_blank" rel="noopener">
+          Athletic.net
+        </a>
       </nav>
     </div>
   </header>
@@ -47,25 +32,39 @@
         <p class="sub">
           A team for every athlete — sprints, distance, jumps, throws, relays.
         </p>
+
         <div class="hero-actions">
-          <a class="btn primary" href="/track-and-field/">Track &amp; Field</a>
-          <a class="btn" href="/cross-country/">Cross Country</a>
+          <a class="btn primary" href="/track-and-field/">Team Info &amp; Links</a>
+          <a class="btn" href="/docs/Meet_Schedule_2026.pdf">2026 Meet Schedule (PDF)</a>
         </div>
       </div>
     </section>
 
     <section class="wrap card">
       <h2>Quick Links</h2>
+
       <div class="link-grid">
-        <a class="tile" href="/track-and-field/#signup">Sign Up</a>
-        <a class="tile" href="/track-and-field/#winter">Winter Training</a>
-        <a class="tile" href="/track-and-field/#rules">Rules &amp; Expectations</a>
-        <a class="tile" href="/track-and-field/#store">Team Store</a>
-        <a class="tile" href="/track-and-field/#absence">Excused Absence Form</a>
-        <a class="tile" href="/track-and-field/#faq">FAQs</a>
-        <a class="tile" href="https://www.athletic.net/" target="_blank" rel="noopener">Athletic.net</a>
-        <a class="tile" href="/track-and-field/donations/">Donations</a>
+        <a class="tile" href="/track-and-field/">Track &amp; Field Hub</a>
+
+        <a class="tile" href="/docs/Meet_Schedule_2026.pdf">
+          2026 Meet Schedule (PDF)
+        </a>
+
+        <a class="tile"
+           href="https://www.athletic.net/team/218/track-and-field-outdoor/2026"
+           target="_blank" rel="noopener">
+          Athletic.net — Results, Meets &amp; Roster
+        </a>
+
+        <!-- Add these later once you have the PDFs/pages -->
+        <a class="tile" href="/docs/Team_Handbook.pdf">Team Handbook (PDF)</a>
+        <a class="tile" href="/docs/Winter_Training.pdf">Winter Training (PDF)</a>
+        <a class="tile" href="/track-and-field/#donations">Donations</a>
       </div>
+
+      <p class="note">
+        This site hosts team documents and announcements. Athletic.net is used for official meet entries and results.
+      </p>
     </section>
   </main>
 
@@ -74,34 +73,13 @@
       <div>
         <div class="footer-title">Contact</div>
         <div><a href="mailto:TRACK_COACH_EMAIL@school.org">Contact Track Coach</a></div>
-        <div><a href="mailto:XC_COACH_EMAIL@school.org">Contact XC Coach</a></div>
       </div>
 
       <div>
         <div class="footer-title">Glencoe High School</div>
-        <div>Address line 1</div>
-        <div>City, OR ZIP</div>
+        <div>Hillsboro, Oregon</div>
       </div>
     </div>
   </footer>
-
-  <script>
-    // simple dropdown behavior for mobile + keyboard
-    document.querySelectorAll('.dropdown').forEach(dd => {
-      const btn = dd.querySelector('.dropbtn');
-      btn.addEventListener('click', () => {
-        const open = dd.classList.toggle('open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    });
-    document.addEventListener('click', (e) => {
-      document.querySelectorAll('.dropdown.open').forEach(dd => {
-        if (!dd.contains(e.target)) {
-          dd.classList.remove('open');
-          dd.querySelector('.dropbtn')?.setAttribute('aria-expanded','false');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
